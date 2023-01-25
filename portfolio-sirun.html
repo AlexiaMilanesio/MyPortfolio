@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DevAlexía Portfolio Website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+        
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="img/devalexia-logo.png" alt="">
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="index.html#services" class="nav__link">My Services</a></li>
+                    <li class="nav__item"><a href="index.html#about" class="nav__link">About me</a></li>
+                    <li class="nav__item"><a href="index.html#work" class="nav__link">My Work</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+
+        <section class="intro">
+            <h1 class="section__title section__title--intro">
+                E-Commerce <strong>Sirun Pâtisserie</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">pastry & events</p>
+            <img src="img/sirun-patisserie/sirun-logo.jpg" alt="" class="intro__img">
+        </section>
+        
+        <div class="portfolio-item-individual">
+            <p style="text-align: center;"><strong>Henry Bootcamp - Final Project</strong></p>
+            <p>This E-Commerce was design and built by a group of 5 people in 3 weeks and a half. The project was developed for a real-life pastry business located in Buenos Aires, Argentina.</p>
+            <p><strong>Project goals:</strong> build an app using the technologies learned during the bootcamp and with a new technology, affirm and connect the learned concepts, learn the best practices, learn and practice the GIT Workflow, teamwork and soft skills development.</p>
+            
+            <br/>
+
+            <!-- Carousel -->
+            <div class="carousel">
+                <div class="carousel-item carousel-item-visible">
+                    <img src="img/sirun-patisserie/sirun-home.png" alt="" />
+                </div>
+                <div class="carousel-item">
+                    <img src="img/sirun-patisserie/sirun-products.png" alt="" />
+                </div>
+                <div class="carousel-item">
+                    <img src="img/sirun-patisserie/sirun-product-detail.png" alt="" />
+                </div>
+                <div class="carousel-item">
+                    <img src="img/sirun-patisserie/sirun-wishlist.png" alt="" />
+                </div>
+                <div class="carousel-item">
+                    <img src="img/sirun-patisserie/sirun-dashboard.png" alt="" />
+                </div>
+                
+                <div class="carousel-actions">
+                    <button id="carousel-button-prev" aria-label="Previous Slidex"><</button>
+                    <button id="carousel-button-next" aria-label="Next Slide">></button>
+                </div>
+            </div>
+
+
+            <br/>
+
+            <p>With this app you are able to see all the products Sirun Pâtisserie is offering at the moment and make a purchase. Also you can check out the full information or detail about every product.</p>
+            <p>As a <strong>registered user</strong> you can have an account, change your profile picture or your name, delete existing addresses associated with your account, request to change/reset your password, have your own wishlist, check your orders history and of course your own shopping cart. Also you can leave comments or reviews on every product and rate them! All your reviews will appear on your account.</p>
+            <p>As an <strong>administrator</strong> you will also have access to the administration section of the app. Here you'll be able to manage the existing products, the existing users, manage orders and change their status and control the reviews every user has added. You will also be able to check out the sales metrics and upload new products to the e-commerce.</p>
+            <p>As a <strong>super administrator</strong>in the administration section of the app you will be able to manage the existing users by also being able to set the role of every user.</p>
+
+            <br/>
+            <p>
+                If you want to know more about this project do not hesitate to check it out. Here I leave you the deployment and the GitHub respository links:
+            </p>
+
+            <div style="text-align: center;">
+                <a href="https://sirunnpatisserie.vercel.app/" target="_blank" class="btn btn-space">Sirun Pâtisserie</a>
+                <a href="https://github.com/proyectofinal30a/App-Sirun-Final-Project" target="_blank" class="btn btn-space">GitHub repository</a>
+            </div>
+            <br/>
+        </div>
+        
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <a href="mailto:alexiamilanesio9@gmail.com" class="footer__link">alexiamilanesio9@gmail.com</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" target="_blank" href="https://www.linkedin.com/in/zarina-alexia-milanesio/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" target="_blank" href="https://github.com/AlexiaMilanesio">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" target="_blank" href="https://www.instagram.com/alemilanesio/">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" target="_blank" href="https://twitter.com/AleMilanesio">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        
+        
+        <script src="js/index.js"></script>
+        
+    </body>
+</html>
