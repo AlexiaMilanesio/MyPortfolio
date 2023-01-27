@@ -284,7 +284,6 @@ header {
 
 .intro__img {
   box-shadow: var(--bs);
-  clip-path: polygon(0 20%, 100% 0, 85% 100%, 10% 85%);
 }
 
 .title__img {
@@ -313,6 +312,10 @@ header {
     min-width: 250px;
     position: relative;
     z-index: 2;
+  }
+
+  .intro__img {
+    clip-path: polygon(0 20%, 100% 0, 85% 100%, 10% 85%);
   }
 
   .section__subtitle--intro {
