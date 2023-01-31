@@ -238,34 +238,41 @@
         </section>
         
 
+        <div class="angle angle2 hidden"></div>
+
+
         <!-- Contact Form -->
-        <form class="contact-form" id="contact">
+        <section class="contact-form" id="contact">
             <h2 class="section__title section__title--work">Contact me!</h2>
             <p class="section__subtitle section__subtitle--work">Have a question or want to work together?</p>
-
-            <div class="input-container">
+    
+            <form class="input-container" id="form" action="/" method="GET">
                 <input 
                     type="text"
-                    placeholder="Name"
+                    id="name"
+                    placeholder="Name*"
                     required 
                 />
-                <span></span>
+                <span id="nameError"></span>
     
                 <input 
                     type="email"
-                    placeholder="Email"
+                    id="email"
+                    placeholder="Email*"
                     required 
                 />
-                <span></span>
-    
+                <span id="emailError"></span>
+        
                 <textarea
-                  placeholder="Write your message"
+                    id="message"
+                    placeholder="Message*"
+                    required
                 ></textarea>
-                <span></span>
+                <span id="messageError"></span>
     
-                <button class="btn form-btn">Send e-mail</button>  
-            </div>
-        </form>
+                <button class="btn form-btn" value="send">Send email</button>  
+            </form>
+        </section>
 
 
         <!-- Footer -->

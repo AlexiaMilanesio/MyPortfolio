@@ -26,7 +26,7 @@
     0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
 
-@media (min-width: 800px) {
+@media (min-width: 850px) {
   :root {
     --fs-h1: 4.5rem;
     --fs-h2: 3.75rem;
@@ -37,7 +37,6 @@
 
 /* General styles */
 
-/* endable to add smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
@@ -221,7 +220,8 @@ header {
 .nav__link {
   color: inherit;
   font-weight: var(--fw-bold);
-  font-size: var(--fs-h2);
+  /* font-size: var(--fs-h2); */
+  font-size: 2em;
   text-decoration: none;
 }
 
@@ -286,6 +286,7 @@ header {
 .hamburger::before {
   top: 6px;
 }
+
 .hamburger::after {
   bottom: 6px;
 }
@@ -518,13 +519,24 @@ header {
   max-width: 1000px;
 }
 
-/* polygon */
+/* Polygon & angle */
 @media (max-width: 1000px) {
   .my-skills {
     position: relative;
     z-index: 10;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+    padding-bottom: 8em;
     margin-bottom: -10vw;
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .my-skills {
+    padding-bottom: 6em;
   }
 }
 
@@ -551,12 +563,12 @@ header {
   justify-content: center;
   align-items: center;
   margin-bottom: 1.5em;
-  transition: all 500ms ease-in-out;
+  /* transition: all 500ms ease-in-out; */
 }
 
-.icon-container:hover {
+/* .icon-container:hover {
   transform: scale(1.15);
-}
+} */
 
 .icon-container > img {
   width: 3em;
@@ -580,17 +592,13 @@ header {
 /* Contact form */
 
 .contact-form {
-  padding: 8em 0 5em 0;
-  background-color: var(--clr-dark);
-  color: var(--clr-light);
-  text-align: center;
-}
-
-form,
-.input-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  padding: 8em 0 5em 0;
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
 }
 
 .input-container {
@@ -605,8 +613,8 @@ textarea {
   padding: 0.5em;
   border: none;
   font-family: inherit;
-  border-right: 3px solid var(--clr-accent);
-  border-bottom: 3px solid var(--clr-accent);
+  /* border-right: 2px solid var(--clr-accent);
+  border-bottom: 2px solid var(--clr-accent); */
 }
 
 textarea {

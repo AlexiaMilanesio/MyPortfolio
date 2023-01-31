@@ -56,3 +56,49 @@ function moveToPrevSlide() {
     
     slides[slidePosition].classList.add("carousel-item-visible");
 }
+
+
+//  Form
+
+
+const form = document.getElementById("form");
+
+const name = document.getElementById("name");
+const email = document.getElementById("email");
+const message = document.getElementById("message");
+
+const nameError = document.getElementById("nameError");
+const emailError = document.getElementById("emailError");
+const messageError = document.getElementById("messageError");
+
+const validString = /^[a-z]+$/i;
+const validEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let errors = [];
+
+    // Name
+    if (name.value === "" || name.value === null || !name.value.length > 2 || !validString.test(name.value)) {
+        errors.push("Name is invalid");
+    }
+    if (errors.length > 0) {
+        nameError.innerText = errors[0];
+    }
+
+    // Email
+    if (email.value === "" || email.value === null || !validEmail.test(email.value)) {
+        errors.push("Email is invalid");
+    }
+    if (errors.length > 0) {
+        emailError.innerText = errors[1];
+    }
+
+    // Message
+    if (message.value === "" || message.value === null || !message.value.length > 10 || !validString.test(message.value)) {
+        errors.push("Message is invalid");
+    }
+    if (errors.length > 0) {
+        messageError.innerText = errors[2];
+    }
+});
