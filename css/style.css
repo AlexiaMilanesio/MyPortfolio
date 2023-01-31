@@ -94,7 +94,7 @@ strong {
 }
 
 .btn-right-space {
-  margin-right: 2em
+  margin-right: 2em;
 }
 
 .btn-space {
@@ -340,29 +340,6 @@ header {
   text-align: center;
 }
 
-@media (max-width: 458px) {
-  .my-services::after,
-  .my-services::before {
-    position: absolute;
-    content: "";
-    width: 150px;
-    height: 40px;
-    background-color: #fff;
-    bottom: -143em;
-    z-index: 100;
-  }
-
-  .my-services::before {
-    right: 50%;
-    transform: skew(0, 20deg);
-  }
-
-  .my-services::after {
-    left: 50%;
-    transform: skew(0, -20deg);
-  }
-}
-
 .section__title--services {
   color: var(--clr-accent);
   position: relative;
@@ -401,6 +378,8 @@ header {
     margin-left: 2em;
   }
 }
+
+/* About me */
 
 .about-me {
   max-width: 1000px;
@@ -443,6 +422,47 @@ header {
   }
 }
 
+/* Angle */
+
+.angle2 {
+  background-color: var(--clr-dark);
+}
+
+.angle2:after {
+  background-color: #fff;
+  -webkit-clip-path: polygon(0 0, 100% 0, 25% 100%);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+@media (min-width: 900px) {
+  .angle2,
+  .angle2:after {
+    height: 85px;
+  }
+}
+
+@media (min-width: 600px) {
+  .angle2,
+  .angle2:after {
+    height: 65px;
+  }
+}
+
+.angle2,
+.angle2:after {
+  height: 45px;
+  width: 100%;
+}
+
+.angle {
+  position: relative;
+}
+
+.angle:after {
+  content: "";
+  position: absolute;
+}
+
 /* My Work */
 
 .my-work {
@@ -479,15 +499,26 @@ header {
 /* Skills */
 
 .my-skills {
+  background-color: #fff;
   margin: auto;
   max-width: 1000px;
+}
+
+/* polygon */
+@media (max-width: 1000px) {
+  .my-skills {
+    position: relative;
+    z-index: 10;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+    margin-bottom: -10vw;
+  }
 }
 
 .section__title--skills {
   color: #111;
   font-weight: var(--fw-bold);
   margin-bottom: 1em;
-} 
+}
 
 .section__subtitle--skills {
   margin-bottom: 2em;
@@ -529,8 +560,54 @@ header {
 
   .icon-container {
     max-width: 2.5em;
-    /* margin: .5em 1em; */
   }
+}
+
+/* Contact form */
+
+.contact-form {
+  padding: 8em 0 5em 0;
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  text-align: center;
+}
+
+form,
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-container {
+  max-width: 600px;
+  width: 80%;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  border: none;
+  border-radius: 2px;
+  font-family: inherit;
+}
+
+textarea {
+  resize: none;
+  height: 10em;
+}
+
+.form-btn {
+  border: none;
+  padding: 0.9em;
+  font-family: inherit;
+  font-size: 0.8rem;
+}
+
+.form-btn:hover {
+  border: none;
 }
 
 /* Footer */
