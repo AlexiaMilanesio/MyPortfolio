@@ -476,6 +476,63 @@ header {
   opacity: 0.5;
 }
 
+/* Skills */
+
+.my-skills {
+  margin: auto;
+  max-width: 1000px;
+}
+
+.section__title--skills {
+  color: #111;
+  font-weight: var(--fw-bold);
+  margin-bottom: 1em;
+} 
+
+.section__subtitle--skills {
+  margin-bottom: 2em;
+  font-size: 1em;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.icon-container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5em;
+  transition: all 500ms ease-in-out;
+}
+
+.icon-container:hover {
+  transform: scale(1.15);
+}
+
+.icon-container > img {
+  width: 3em;
+}
+
+.icon-container > span {
+  font-size: 1em;
+}
+
+@media (max-width: 650px) {
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  }
+
+  .icon-container {
+    max-width: 2.5em;
+    /* margin: .5em 1em; */
+  }
+}
+
 /* Footer */
 
 .footer {
