@@ -111,7 +111,21 @@ strong {
 
   .btn-space {
     margin-right: 0;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
+  }
+}
+
+@media (max-width: 376px) {
+  .btn-right-space {
+    margin: 0;
+    margin-bottom: 1.5em;
+  }
+
+  .services-btns-containter  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 
