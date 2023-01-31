@@ -604,8 +604,9 @@ textarea {
   margin-bottom: 1em;
   padding: 0.5em;
   border: none;
-  border-radius: 2px;
   font-family: inherit;
+  border-right: 3px solid var(--clr-accent);
+  border-bottom: 3px solid var(--clr-accent);
 }
 
 textarea {
