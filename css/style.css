@@ -601,7 +601,7 @@ textarea {
 
 .form-btn {
   border: none;
-  padding: 0.9em;
+  padding: 0.9em 2em;
   font-family: inherit;
   font-size: 0.8rem;
 }
