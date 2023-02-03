@@ -332,7 +332,6 @@ header {
 }
 
 .title__img {
-  /* opacity: 0; */
   animation-delay: .6s;
   box-shadow: var(--bs);
 }
