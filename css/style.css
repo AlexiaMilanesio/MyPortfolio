@@ -11,6 +11,12 @@
   animation-play-state: paused !important;
 }
 
+.loading-image {
+  width: 5em; 
+  margin: auto; 
+  margin-top: 3em;
+}
+
 /* Custom Properties */
 
 :root {
