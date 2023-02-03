@@ -1,4 +1,15 @@
 
+// Load ready
+
+
+document.body.className += "js-loading";
+
+window.addEventListener("load", () => {
+    document.body.className = document.body.className.replace("js-loading", "");
+}, false);
+
+
+
 // Hamburger menu
 
 

@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+/* Pause all animations till content is loaded */
+.js-loading *,
+.js-loading *:before,
+.js-loading *:after {
+  animation-play-state: paused !important;
+}
+
 /* Custom Properties */
 
 :root {
@@ -149,19 +156,32 @@ h3 {
 
 .section__title {
   margin-bottom: 0.25em;
+} 
+
+.animate-pop-in {
+  animation: pop-in .6s cubic-bezier(0,.9,.3,1.2) forwards;
 }
 
 .section__title--intro {
+  opacity: 0;
   font-weight: var(--fw-reg);
+  animation-delay: .4s;
 }
 
 .section__title--intro strong {
+  opacity: 0;
   display: block;
+  animation-delay: .6s;
 }
 
 .section__subtitle {
   margin: 0;
   font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro {
+  opacity: 0;
+  animation-delay: .8s;
 }
 
 .section__subtitle--intro,
@@ -300,7 +320,13 @@ header {
   box-shadow: var(--bs);
 }
 
+.animate-slide-right {
+  animation: slide-right .6s cubic-bezier(0,.9,.3,1.2) forwards;
+}
+
 .title__img {
+  opacity: 0;
+  animation-delay: .6s;
   box-shadow: var(--bs);
 }
 
@@ -352,12 +378,30 @@ header {
   /* background-blend-mode: multiply; */
   color: var(--clr-light);
   text-align: center;
+  opacity: 0;
+}
+
+.animate-slide-up {
+  animation: slide-up .5s .5s ease-out forwards;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .section__title--services {
   color: var(--clr-accent);
   position: relative;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  /* text-shadow: 0 0 2px rgba(0, 0, 0, 0.6); */
 }
 
 .section__title--services::after {
@@ -374,10 +418,27 @@ header {
   margin-bottom: 4em;
 }
 
+.animate-scroll-slide-right {
+  opacity: 0;
+  animation: scroll-slide-right .7s 10s cubic-bezier(0,.9,.3,1.2) forwards;
+}
+
 .service {
   max-width: 500px;
   margin: 0 auto;
   text-shadow: 0 0 1px black;
+}
+
+.service-1 {
+  animation-delay: .6s;
+}
+
+.service-2 {
+  animation-delay: .8s;
+}
+
+.service-3 {
+  animation-delay: 1s;
 }
 
 @media (min-width: 800px) {
@@ -519,7 +580,7 @@ header {
 }
 
 /* Polygon & angle */
-@media (max-width: 1000px) {
+/* @media (max-width: 1000px) {
   .my-skills {
     position: relative;
     z-index: 10;
@@ -531,7 +592,7 @@ header {
   .hidden {
     display: none;
   }
-}
+} */
 
 @media (max-width: 600px) {
   .my-skills {
@@ -757,5 +818,41 @@ textarea {
   }
   100% {
     opacity: 1;
+  }
+}
+
+/* Animation for intro image */
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-6rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Animation for intro title and subtitle */
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-4rem) scale(.8);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Animation for services */
+@keyframes scroll-slide-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
   }
 }
