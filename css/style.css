@@ -327,11 +327,12 @@ header {
 }
 
 .animate-slide-right {
+  opacity: 0;
   animation: slide-right .6s cubic-bezier(0,.9,.3,1.2) forwards;
 }
 
 .title__img {
-  opacity: 0;
+  /* opacity: 0; */
   animation-delay: .6s;
   box-shadow: var(--bs);
 }

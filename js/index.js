@@ -1,7 +1,4 @@
-
 // Load ready
-
-
 
 document.body.className += "js-loading";
 
@@ -13,18 +10,15 @@ window.addEventListener(
   false
 );
 
-// window.load(() => {
-//   document.getElementById("loading").hide();
-// });
-window.onload = () => {
+window.addEventListener(
+  "load",
+  () => {
     document.getElementById("loading").style.display = "none";
-};
-
-
+  },
+  true
+);
 
 // Hamburger menu
-
-
 
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelectorAll(".nav__link");
@@ -39,11 +33,7 @@ navLinks.forEach((link) => {
   });
 });
 
-
-
 // Carousel
-
-
 
 const slides = document.getElementsByClassName("carousel-item");
 let slidePosition = 0;
@@ -87,11 +77,7 @@ function moveToPrevSlide() {
   slides[slidePosition].classList.add("carousel-item-visible");
 }
 
-
-
 //  Form
-
-
 
 // const form = document.getElementById("form");
 
