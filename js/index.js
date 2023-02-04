@@ -1,4 +1,6 @@
-// Load ready
+// Load ready to start animations
+
+
 
 document.body.className += "js-loading";
 
@@ -18,7 +20,48 @@ window.addEventListener(
   true
 );
 
+
+// Animation on scroll
+
+
+var scroll = window.requestAnimationFrame || function(callback) {
+    window.setTimeout(callback, 1000/60)
+};
+
+var elementsToShow = document.querySelector(".show-on-scroll");
+
+function loop() {
+    elementsToShow.forEach(function(element) {
+        if (isElementInViewport(element)) {
+            element.classList.add("is-visible");
+        } else {
+            element.classList.remove("is-visible");
+        }
+        scroll(loop);
+    });
+}
+
+loop();
+
+function isElementInViewport (element) {
+    if (typeof jQuery === "function" && element instanceof jQuery) {
+        element = element[0];
+    }
+
+    var rect = element.getBoundingClientRect(); // rectangle around the element we want to check
+
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /* or $(window).height() */
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() */
+    );
+}
+
+
+
 // Hamburger menu
+
 
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelectorAll(".nav__link");
