@@ -1,5 +1,5 @@
-// Load ready to start animations
 
+// Load ready to start animations
 
 
 document.body.className += "js-loading";
@@ -24,40 +24,44 @@ window.addEventListener(
 // Animation on scroll
 
 
-var scroll = window.requestAnimationFrame || function(callback) {
-    window.setTimeout(callback, 1000/60)
-};
+// var scroll = window.requestAnimationFrame || 
+//              function(callback) {
+//                window.setTimeout(callback, 1000/60);
+//              };
 
-var elementsToShow = document.querySelector(".show-on-scroll");
+// var elementsToShow = document.querySelectorAll(".show-on-scroll"); // returns array with elements that have that class
+// console.log(elementsToShow)
 
-function loop() {
-    elementsToShow.forEach(function(element) {
-        if (isElementInViewport(element)) {
-            element.classList.add("is-visible");
-        } else {
-            element.classList.remove("is-visible");
-        }
-        scroll(loop);
-    });
-}
+// function loop() {
+//   elementsToShow.forEach(function(element) {
+//     if (isElementInViewport(element)) {
+//       element.classList.add("is-visible");
+//     } else {
+//       element.classList.remove("is-visible");
+//     }
+//     scroll(loop);
+//   });
+// }
 
-loop();
+// loop();
 
-function isElementInViewport (element) {
-    if (typeof jQuery === "function" && element instanceof jQuery) {
-        element = element[0];
-    }
+// function isElementInViewport(el) {
+//   if (typeof jQuery === "function" && el instanceof jQuery) {
+//     el = el[0];
+//   }
 
-    var rect = element.getBoundingClientRect(); // rectangle around the element we want to check
+//   var rect = el.getBoundingClientRect(); // rectangle around the element we want to check
 
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /* or $(window).height() */
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() */
-    );
-}
-
+//   return (
+//     (rect.top <= 0 && rect.bottom >= 0)
+//     || 
+//     (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight)) 
+//     &&
+//     (rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+//     ||
+//     (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+//   );
+// }
 
 
 // Hamburger menu
@@ -76,7 +80,9 @@ navLinks.forEach((link) => {
   });
 });
 
+
 // Carousel
+
 
 const slides = document.getElementsByClassName("carousel-item");
 let slidePosition = 0;
@@ -120,18 +126,17 @@ function moveToPrevSlide() {
   slides[slidePosition].classList.add("carousel-item-visible");
 }
 
+
 //  Form
 
-// const form = document.getElementById("form");
 
+// const form = document.getElementById("form");
 // const name = document.getElementById("name");
 // const email = document.getElementById("email");
 // const message = document.getElementById("message");
-
 // const nameError = document.getElementById("nameError");
 // const emailError = document.getElementById("emailError");
 // const messageError = document.getElementById("messageError");
-
 // const validString = /^[a-z]+$/i;
 // const validEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
 
