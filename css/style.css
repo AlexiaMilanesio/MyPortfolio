@@ -487,8 +487,9 @@ header {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  margin-top: 1em;
   border-bottom: 1px solid grey;
-  padding: 1em 0;
+  padding-bottom: 1.5em;
 }
 
 .professional-timeline__item:last-child {
@@ -529,16 +530,18 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: none;
   }
 
   .professional-timeline__year {
     padding: .5em 1em;
-    margin-right: 1em;
+    margin-right: 0;
     width: 90%;
   }
   
   .professional-timeline__technologies {
     width: 90%;
+    margin: 0;
   }
 }
 
