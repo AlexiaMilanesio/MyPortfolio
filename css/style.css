@@ -198,7 +198,8 @@ h3 {
   margin-bottom: 1em;
 }
 
-.section__subtitle--work {
+.section__subtitle--work,
+.section__subtitle--professional-timeline {
   color: var(--clr-accent);
   font-weight: var(--fw-bold);
   margin-bottom: 2em;
@@ -462,6 +463,82 @@ header {
 
   .service + .service {
     margin-left: 2em;
+  }
+}
+
+/* Professional timeline */
+
+.professional-timeline {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  text-align: center;
+}
+
+.professional-timeline__title {
+  text-align: center;
+}
+
+.professional-timeline__body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.professional-timeline__item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-bottom: 1px solid grey;
+  padding: 1em 0;
+}
+
+.professional-timeline__item:last-child {
+  border: none;
+}
+
+.professional-timeline__year {
+  background-color: var(--clr-accent);
+  color: var(--clr-dark);
+  padding: .5em 1em;
+  font-family: var(--ff-secondary);
+  margin-right: 2em;
+  width: 400px;
+}
+
+.professional-timeline__technologies {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.professional-timeline__technologies__subtitle {
+  border-bottom: 1px solid var(--clr-light);
+}
+
+.professional-timeline__academy-name {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.1em;
+}
+
+@media (max-width: 1215px) {
+  .professional-timeline__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .professional-timeline__year {
+    padding: .5em 1em;
+    margin-right: 1em;
+    width: 90%;
+  }
+  
+  .professional-timeline__technologies {
+    width: 90%;
   }
 }
 
