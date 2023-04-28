@@ -12,8 +12,8 @@
 }
 
 .loading-image {
-  width: 5em; 
-  margin: auto; 
+  width: 5em;
+  margin: auto;
   margin-top: 3em;
 }
 
@@ -133,7 +133,7 @@ strong {
     margin-bottom: 1.5em;
   }
 
-  .services-btns-containter  {
+  .services-btns-containter {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -162,22 +162,22 @@ h3 {
 
 .section__title {
   margin-bottom: 0.25em;
-} 
+}
 
 .animate-pop-in {
-  animation: pop-in .6s cubic-bezier(0,.9,.3,1.2) forwards;
+  animation: pop-in 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
 }
 
 .section__title--intro {
   opacity: 0;
   font-weight: var(--fw-reg);
-  animation-delay: .4s;
+  animation-delay: 0.4s;
 }
 
 .section__title--intro strong {
   opacity: 0;
   display: block;
-  animation-delay: .6s;
+  animation-delay: 0.6s;
 }
 
 .section__subtitle {
@@ -187,7 +187,7 @@ h3 {
 
 .section__subtitle--intro {
   opacity: 0;
-  animation-delay: .8s;
+  animation-delay: 0.8s;
 }
 
 .section__subtitle--intro,
@@ -228,7 +228,6 @@ header {
   left: 0;
   right: 0;
   z-index: 100;
-
   transform: translateX(100%);
   transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
 }
@@ -329,11 +328,11 @@ header {
 
 .animate-slide-right {
   opacity: 0;
-  animation: slide-right .6s cubic-bezier(0,.9,.3,1.2) forwards;
+  animation: slide-right 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
 }
 
 .title__img {
-  animation-delay: .6s;
+  animation-delay: 0.6s;
   box-shadow: var(--bs);
 }
 
@@ -389,7 +388,7 @@ header {
 }
 
 .animate-slide-up {
-  animation: slide-up .5s .5s ease-out forwards;
+  animation: slide-up 0.5s 0.5s ease-out forwards;
 }
 
 @keyframes slide-up {
@@ -398,7 +397,7 @@ header {
     transform: translateY(5rem);
   }
   50% {
-    opacity: .5;
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
@@ -427,7 +426,7 @@ header {
 
 .animate-scroll-slide-right {
   opacity: 0;
-  animation: scroll-slide-right .7s 10s cubic-bezier(0,.9,.3,1.2) forwards;
+  animation: scroll-slide-right 0.7s 10s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
 }
 
 .is-visible {
@@ -442,11 +441,11 @@ header {
 }
 
 .service-1 {
-  animation-delay: .6s;
+  animation-delay: 0.6s;
 }
 
 .service-2 {
-  animation-delay: .8s;
+  animation-delay: 0.8s;
 }
 
 .service-3 {
@@ -477,13 +476,23 @@ header {
   box-shadow: var(--bs);
 }
 
+.link {
+  text-decoration: none;
+  color: var(--clr-dark);
+  border-bottom: 1px solid var(--clr-dark);
+}
+
+.link:hover {
+  color: black;
+  border-bottom: 1px solid black;
+}
 
 /* About me animations */
 .animate-show-on-scroll {
   opacity: 0;
   transform: translateY(4em) rotateZ(-5deg);
-  transition: transform 4s .25s cubic-bezier(0, 1, .3, 1),
-              opacity .3s .25s ease-out;
+  transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1),
+    opacity 0.3s 0.25s ease-out;
   will-change: transform, opacity;
 }
 
@@ -491,7 +500,6 @@ header {
   opacity: 1;
   transform: rotateZ(-2deg);
 }
-
 
 @media (min-width: 600px) {
   .about-me {
@@ -571,7 +579,7 @@ header {
 /* Angle 4 */
 
 .angle4 {
-  background-color: #fff
+  background-color: #fff;
 }
 
 .angle4:after {
@@ -581,22 +589,24 @@ header {
 }
 
 @media (min-width: 900px) {
-  .angle4, .angle4:after {
+  .angle4,
+  .angle4:after {
     height: 105px;
   }
 }
 
 @media (min-width: 600px) {
-  .angle4, .angle4:after {
+  .angle4,
+  .angle4:after {
     height: 75px;
-  }  
+  }
 }
 
-.angle4, .angle4:after {
+.angle4,
+.angle4:after {
   height: 50px;
   width: 100%;
 }
-
 
 /* My Work */
 
@@ -807,7 +817,7 @@ textarea {
 }
 
 .portfolio-skills-container {
-  margin: auto; 
+  margin: auto;
   margin-top: 1.5em;
   max-width: 700px;
 }
@@ -874,7 +884,7 @@ textarea {
     opacity: 0;
   }
   50% {
-    opacity: .8;
+    opacity: 0.8;
   }
   100% {
     opacity: 1;
@@ -897,10 +907,10 @@ textarea {
 @keyframes pop-in {
   0% {
     opacity: 0;
-    transform: translateY(-4rem) scale(.8);
+    transform: translateY(-4rem) scale(0.8);
   }
   50% {
-    opacity: .8;
+    opacity: 0.8;
     transform: none;
   }
   100% {
