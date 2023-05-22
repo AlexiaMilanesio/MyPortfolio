@@ -524,6 +524,16 @@ header {
   font-size: 1.1em;
 }
 
+.repo-link {
+  margin-left: 1.5em;
+  color: var(--clr-accent);
+}
+
+.repo-link:hover {
+  color: rgb(121, 202, 0);
+}
+
+
 @media (max-width: 1215px) {
   .professional-timeline__item {
     display: flex;
