@@ -2,23 +2,23 @@
 // Load ready to start animations
 
 
-document.body.className += "js-loading";
+// document.body.className += "js-loading";
 
-window.addEventListener(
-  "load",
-  () => {
-    document.body.className = document.body.className.replace("js-loading", "");
-  },
-  false
-);
+// window.addEventListener(
+//   "load",
+//   () => {
+//     document.body.className = document.body.className.replace("js-loading", "");
+//   },
+//   false
+// );
 
-window.addEventListener(
-  "load",
-  () => {
-    document.getElementById("loading").style.display = "none";
-  },
-  true
-);
+// window.addEventListener(
+//   "load",
+//   () => {
+//     document.getElementById("loading").style.display = "none";
+//   },
+//   true
+// );
 
 
 // Animation on scroll
