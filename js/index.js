@@ -96,7 +96,7 @@ document
   .addEventListener("click", moveToPrevSlide);
 
 function hideAllSlides() {
-  for (let slide of slides) {
+  for (let slide of slides) { 
     slide.classList.remove("carousel-item-visible");
     slide.classList.add("carousel-item-hidden");
   }

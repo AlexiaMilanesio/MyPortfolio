@@ -534,6 +534,15 @@ header {
   text-decoration: underline;
 }
 
+.professional-timeline__org {
+  color: var(--clr-accent);
+  letter-spacing: 1px;
+}
+
+.professional-timeline__org-item {
+  margin-left: 1.5em;
+}
+
 
 @media (max-width: 1215px) {
   .professional-timeline__item {
