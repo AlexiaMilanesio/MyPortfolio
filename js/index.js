@@ -127,8 +127,18 @@ function moveToPrevSlide() {
 }
 
 
-//  Form
+var video = document.getElementById("sirunVideo");
 
+function playVideo() { 
+ video.play(); 
+} 
+
+function pauseVideo() { 
+ video.pause(); 
+} 
+
+
+//  Form
 
 // const form = document.getElementById("form");
 // const name = document.getElementById("name");

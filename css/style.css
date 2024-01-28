@@ -72,6 +72,12 @@ img {
   max-width: 100%;
 }
 
+video {
+  display: block;
+  max-width: 100%;
+}
+
+
 strong {
   font-weight: var(--fw-bold);
 }
@@ -945,7 +951,7 @@ textarea {
   animation: fadeVisibility 0.7s;
 }
 
-.carousel .carousel-item img {
+.carousel .carousel-item img video {
   width: 100%;
   /* max-width: 1000px; */
   height: auto;
@@ -977,6 +983,21 @@ textarea {
 
 .carousel .carousel-actions button#carousel-button-next {
   margin-right: 20px;
+}
+
+.video-btn__container {
+  display: flex;
+  justify-content: center;
+}
+
+.video-btn {
+  margin: .5em .5em 0 .5em;
+  border: none;
+  background-color: white;
+}
+
+.video-btn:hover {
+  cursor: pointer;
 }
 
 @keyframes fadeVisibility {
