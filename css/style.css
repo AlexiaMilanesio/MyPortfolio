@@ -549,6 +549,15 @@ header {
   margin-left: 1.5em;
 }
 
+.professional-timeline__project-link {
+  color: white;
+  text-decoration: none;
+}
+
+.professional-timeline__project-link:hover {
+  cursor: pointer;
+  color: rgb(197, 194, 194);
+}
 
 @media (max-width: 1215px) {
   .professional-timeline__item {
